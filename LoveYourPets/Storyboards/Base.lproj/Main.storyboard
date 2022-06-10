@@ -1,24 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Td7-ex-XT9">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Home View Controller-->
+        <scene sceneID="vEP-Nf-6aC">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="HomeViewController" id="Td7-ex-XT9" customClass="HomeViewController" customModule="Lyst" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wrM-QE-Wxy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ll-sP-du5">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pv6-c0-00E">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="dLN-df-2HZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adorable describes a delightful appearance that makes you smile in amazement. It shows how pretty a dog is -&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnl-hc-ju3">
+                                        <rect key="frame" x="20" y="219.99999999999997" width="187.66666666666666" height="92.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgW-zf-QXF">
+                                        <rect key="frame" x="217.66666666666663" y="236.33333333333331" width="147.33333333333337" height="60"/>
+                                        <color key="backgroundColor" name="NG800"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="8rB-0f-fLZ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Bhow Bhow 🐶">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                            <color key="baseForegroundColor" name="NG100"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dogAction:" destination="Td7-ex-XT9" eventType="touchUpInside" id="xfH-NF-dc8"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A kitten is the delight of a household. All day long a comedy is played out by an incomparable actor." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akv-UI-Yy8">
+                                        <rect key="frame" x="167.66666666666663" y="362.66666666666669" width="187.33333333333337" height="74"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pets" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-pG-KVs">
+                                        <rect key="frame" x="0.0" y="484" width="375" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="dNv-hS-lCH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXN-8D-uM2">
+                                        <rect key="frame" x="10" y="369.66666666666669" width="147.66666666666666" height="60"/>
+                                        <color key="backgroundColor" name="NG800"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="a6p-8S-rZs"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="m8A-wd-EH6"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Meaw Meaw 🐱">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                            <color key="baseForegroundColor" name="NG100"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="catAction:" destination="Td7-ex-XT9" eventType="touchUpInside" id="GJD-cr-kMB"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love your Pet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzl-vJ-R5l">
+                                        <rect key="frame" x="10" y="10" width="355" height="101.33333333333333"/>
+                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
+                                        <color key="textColor" name="NG900"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="akv-UI-Yy8" secondAttribute="trailing" constant="20" id="33Q-jY-X3e"/>
+                                    <constraint firstItem="akv-UI-Yy8" firstAttribute="leading" secondItem="eXN-8D-uM2" secondAttribute="trailing" constant="10" id="8y8-Ze-jxZ"/>
+                                    <constraint firstItem="pv6-c0-00E" firstAttribute="top" secondItem="5ll-sP-du5" secondAttribute="top" id="BBo-Rr-qUz"/>
+                                    <constraint firstItem="vnl-hc-ju3" firstAttribute="top" secondItem="pv6-c0-00E" secondAttribute="bottom" constant="20" id="G4J-VS-1J1"/>
+                                    <constraint firstItem="Ef5-pG-KVs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="akv-UI-Yy8" secondAttribute="bottom" constant="20" id="Psn-o2-SVJ"/>
+                                    <constraint firstItem="vgW-zf-QXF" firstAttribute="centerY" secondItem="vnl-hc-ju3" secondAttribute="centerY" id="S4f-bj-hfU"/>
+                                    <constraint firstItem="Vzl-vJ-R5l" firstAttribute="top" secondItem="5ll-sP-du5" secondAttribute="top" constant="10" id="UUa-3e-nVU"/>
+                                    <constraint firstItem="vnl-hc-ju3" firstAttribute="width" secondItem="5ll-sP-du5" secondAttribute="width" multiplier="0.5" id="YyC-nY-ERg"/>
+                                    <constraint firstItem="vnl-hc-ju3" firstAttribute="leading" secondItem="5ll-sP-du5" secondAttribute="leading" constant="20" id="ZbG-eW-9wT"/>
+                                    <constraint firstItem="pv6-c0-00E" firstAttribute="leading" secondItem="5ll-sP-du5" secondAttribute="leading" id="ZdW-gG-diq"/>
+                                    <constraint firstAttribute="trailing" secondItem="vgW-zf-QXF" secondAttribute="trailing" constant="10" id="Zho-6u-9l9"/>
+                                    <constraint firstItem="Ef5-pG-KVs" firstAttribute="leading" secondItem="5ll-sP-du5" secondAttribute="leading" id="e40-Ib-Ftm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ef5-pG-KVs" secondAttribute="trailing" id="igN-b8-c5k"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vzl-vJ-R5l" secondAttribute="trailing" constant="10" id="jh0-cg-CYV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ef5-pG-KVs" secondAttribute="bottom" constant="-50" id="m6x-gh-WgH"/>
+                                    <constraint firstItem="akv-UI-Yy8" firstAttribute="width" secondItem="5ll-sP-du5" secondAttribute="width" multiplier="0.5" id="nDV-zg-sCt"/>
+                                    <constraint firstItem="eXN-8D-uM2" firstAttribute="leading" secondItem="5ll-sP-du5" secondAttribute="leading" constant="10" id="nVq-NW-npl"/>
+                                    <constraint firstItem="vgW-zf-QXF" firstAttribute="leading" secondItem="vnl-hc-ju3" secondAttribute="trailing" constant="10" id="u4h-9X-9zo"/>
+                                    <constraint firstItem="akv-UI-Yy8" firstAttribute="top" secondItem="vnl-hc-ju3" secondAttribute="bottom" constant="50" id="vvt-kR-ybr"/>
+                                    <constraint firstItem="eXN-8D-uM2" firstAttribute="centerY" secondItem="akv-UI-Yy8" secondAttribute="centerY" id="xPg-Bi-ANc"/>
+                                    <constraint firstAttribute="trailing" secondItem="pv6-c0-00E" secondAttribute="trailing" id="xsg-Sd-NUZ"/>
+                                    <constraint firstItem="Vzl-vJ-R5l" firstAttribute="leading" secondItem="5ll-sP-du5" secondAttribute="leading" constant="10" id="yQp-Hn-cBz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CKu-nc-XhY"/>
+                        <color key="backgroundColor" name="NG100"/>
+                        <constraints>
+                            <constraint firstItem="5ll-sP-du5" firstAttribute="top" secondItem="CKu-nc-XhY" secondAttribute="top" id="E51-oX-LcL"/>
+                            <constraint firstItem="CKu-nc-XhY" firstAttribute="bottom" secondItem="5ll-sP-du5" secondAttribute="bottom" id="TiQ-QR-7iE"/>
+                            <constraint firstItem="5ll-sP-du5" firstAttribute="leading" secondItem="CKu-nc-XhY" secondAttribute="leading" id="X6Q-GY-deu"/>
+                            <constraint firstItem="CKu-nc-XhY" firstAttribute="trailing" secondItem="5ll-sP-du5" secondAttribute="trailing" id="wIY-Yt-sRi"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sf1-Kn-dM6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="653.60000000000002" y="-575.61576354679801"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="catIcon" width="600" height="268"/>
+        <image name="pets" width="512" height="512"/>
+        <namedColor name="NG100">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NG800">
+            <color red="0.20399999618530273" green="0.28600001335144043" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NG900">
+            <color red="0.14100000262260437" green="0.21199999749660492" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

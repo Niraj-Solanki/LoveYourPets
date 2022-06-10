@@ -22,6 +22,7 @@
 		AA98F07F2853DC3200F3855E /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F07E2853DC3200F3855E /* RequestProtocol.swift */; };
 		AA98F0812853DC5200F3855E /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0802853DC5200F3855E /* ParameterEncoder.swift */; };
 		AA98F0832853DC8500F3855E /* LystError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0822853DC8500F3855E /* LystError.swift */; };
+		AA98F0852853DDA700F3855E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0842853DDA700F3855E /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		AA98F07E2853DC3200F3855E /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		AA98F0802853DC5200F3855E /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		AA98F0822853DC8500F3855E /* LystError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LystError.swift; sourceTree = "<group>"; };
+		AA98F0842853DDA700F3855E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		AA98F06C2853DA2000F3855E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AA98F0842853DDA700F3855E /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				AA98F03C2853DA0B00F3855E /* AppDelegate.swift in Sources */,
 				AA98F07D2853DC2100F3855E /* NetworkManager.swift in Sources */,
 				AA98F07F2853DC3200F3855E /* RequestProtocol.swift in Sources */,
+				AA98F0852853DDA700F3855E /* HomeViewController.swift in Sources */,
 				AA98F03E2853DA0B00F3855E /* SceneDelegate.swift in Sources */,
 				AA98F0772853DB8600F3855E /* Constants.swift in Sources */,
 				AA98F0812853DC5200F3855E /* ParameterEncoder.swift in Sources */,
