@@ -1,5 +1,5 @@
 //
-//  DogViewModel.swift
+//  CatViewModel.swift
 //  LoveYourPets
 //
 //  Created by Niraj Solanki on 11/06/22.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-class DogViewModel: ObservableObject {
-    @Published var items: [DogModel] = []
-    @Published var breedList: [DogModel] = [] {
+class CatViewModel: ObservableObject {
+    @Published var items: [CatModel] = []
+    @Published var breedList: [CatModel] = [] {
         didSet {
             items = breedList
         }
@@ -27,14 +27,14 @@ class DogViewModel: ObservableObject {
     }
     
     var title: String {
-        return "Find Your Dog"
+        return "Find Your Cat"
     }
     
     var prompt: String {
-        return "🐶 Bhow Bhow (find me 🐾)"
+        return "🐱 Meaw Meaw (find me 🐾)"
     }
     
-    func loadMoreContentIfNeeded(currentItem item: DogModel) {
+    func loadMoreContentIfNeeded(currentItem item: CatModel) {
         guard searchtext.isEmpty else { return }
         
         let thresholdIndex = items.index(items.endIndex, offsetBy: -5)
@@ -60,12 +60,12 @@ class DogViewModel: ObservableObject {
     }
     
     private func fetchBreed(by name: String) {
-        let breedSearchAPI = DogRepository.search(breed: name)
-        networkManager.request(repository: breedSearchAPI) { [weak self] (result: Result<[DogModel], LystError>) in
+        let breedSearchAPI = CatRepository.search(breed: name)
+        networkManager.request(repository: breedSearchAPI) { [weak self] (result: Result<[CatModel], LystError>) in
             switch result {
-            case .success(let dogModels):
+            case .success(let catModels):
                 DispatchQueue.main.async {
-                    self?.items = dogModels
+                    self?.items = catModels
                 }
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
@@ -75,12 +75,12 @@ class DogViewModel: ObservableObject {
     
     func fetchBreeds() {
         print("Page: \(currentPage)")
-        let breedsAPI = DogRepository.breeds(page: currentPage)
-        networkManager.request(repository: breedsAPI) { [weak self] (result: Result<[DogModel], LystError>) in
+        let breedsAPI = CatRepository.breeds(page: currentPage)
+        networkManager.request(repository: breedsAPI) { [weak self] (result: Result<[CatModel], LystError>) in
             switch result {
-            case .success(let dogModels):
+            case .success(let catModels):
                 DispatchQueue.main.async {
-                    self?.breedList.append(contentsOf: dogModels)
+                    self?.breedList.append(contentsOf: catModels)
                 }
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")

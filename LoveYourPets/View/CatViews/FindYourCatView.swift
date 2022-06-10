@@ -1,5 +1,5 @@
 //
-//  FindYourPetView.swift
+//  FindYourCatView.swift
 //  LoveYourPets
 //
 //  Created by Niraj Solanki on 11/06/22.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct FindYourPetView: View {
+struct FindYourCatView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var viewModel: PetViewModel
+    @ObservedObject var viewModel: CatViewModel
     @State var searchText = ""
     
     var gridLayout = Array(repeating: GridItem(), count: 3)
@@ -22,9 +22,9 @@ struct FindYourPetView: View {
                 LazyVGrid(columns: gridLayout) {
                     ForEach(viewModel.items, id: \.self) { breed in
                         
-                        NavigationLink(destination: PetDetailView(viewModel: breed)) {
+                        NavigationLink(destination: CatDetailView(viewModel: breed)) {
                             PetView(
-                                imageUrl: "\(Constants.Dog.imageURL)\(breed.imageRefId ?? "").jpg",
+                                imageUrl: "\(Constants.Cat.imageURL)\(breed.imageRefId ?? "").jpg",
                                 breedName: breed.name ?? "")
                         }
                         .onAppear {
@@ -34,7 +34,7 @@ struct FindYourPetView: View {
                 }
                 
             }
-            .navigationTitle("Know your dog")
+            .navigationTitle(viewModel.title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Image("home")
@@ -45,7 +45,7 @@ struct FindYourPetView: View {
                     }
             }
         }
-        .searchable(text: $searchText, prompt: "🐶 Bhow Bhow (find me 🐾)")
+        .searchable(text: $searchText, prompt: viewModel.prompt)
         .font(AppFont.common(size: 14))
         .onChange(of: searchText) { searchText in
             viewModel.searchBreeds(by: searchText)
@@ -54,12 +54,10 @@ struct FindYourPetView: View {
     }
 }
 
-
-
-struct FindYourPetView_Previews: PreviewProvider {
+struct FindYourCatView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            FindYourPetView(viewModel: PetViewModel(networkManager: NetworkManagerImpl()))
+            FindYourCatView(viewModel: CatViewModel(networkManager: NetworkManagerImpl()))
         }
     }
 }
