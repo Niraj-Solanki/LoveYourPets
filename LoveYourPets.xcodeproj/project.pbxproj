@@ -23,6 +23,11 @@
 		AA98F0812853DC5200F3855E /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0802853DC5200F3855E /* ParameterEncoder.swift */; };
 		AA98F0832853DC8500F3855E /* LystError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0822853DC8500F3855E /* LystError.swift */; };
 		AA98F0852853DDA700F3855E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0842853DDA700F3855E /* HomeViewController.swift */; };
+		AA98F0882853DE3400F3855E /* PetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0872853DE3400F3855E /* PetView.swift */; };
+		AA98F08A2853DEC300F3855E /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0892853DEC300F3855E /* DogModel.swift */; };
+		AA98F08C2853DF1200F3855E /* FindYourPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F08B2853DF1200F3855E /* FindYourPetView.swift */; };
+		AA98F08E2853DF7200F3855E /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F08D2853DF7200F3855E /* DogViewModel.swift */; };
+		AA98F0902853DFE800F3855E /* PetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F08F2853DFE800F3855E /* PetDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +67,11 @@
 		AA98F0802853DC5200F3855E /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		AA98F0822853DC8500F3855E /* LystError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LystError.swift; sourceTree = "<group>"; };
 		AA98F0842853DDA700F3855E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AA98F0872853DE3400F3855E /* PetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetView.swift; sourceTree = "<group>"; };
+		AA98F0892853DEC300F3855E /* DogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogModel.swift; sourceTree = "<group>"; };
+		AA98F08B2853DF1200F3855E /* FindYourPetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourPetView.swift; sourceTree = "<group>"; };
+		AA98F08D2853DF7200F3855E /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
+		AA98F08F2853DFE800F3855E /* PetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +199,7 @@
 		AA98F0702853DA5C00F3855E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AA98F08D2853DF7200F3855E /* DogViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -196,6 +207,9 @@
 		AA98F0712853DA6700F3855E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AA98F0862853DE2700F3855E /* PetView */,
+				AA98F08B2853DF1200F3855E /* FindYourPetView.swift */,
+				AA98F08F2853DFE800F3855E /* PetDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +217,7 @@
 		AA98F0722853DA6E00F3855E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AA98F0892853DEC300F3855E /* DogModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,6 +240,14 @@
 				AA98F07A2853DC0500F3855E /* DogRepository.swift */,
 			);
 			path = DogRepository;
+			sourceTree = "<group>";
+		};
+		AA98F0862853DE2700F3855E /* PetView */ = {
+			isa = PBXGroup;
+			children = (
+				AA98F0872853DE3400F3855E /* PetView.swift */,
+			);
+			path = PetView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,13 +387,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA98F08C2853DF1200F3855E /* FindYourPetView.swift in Sources */,
 				AA98F0832853DC8500F3855E /* LystError.swift in Sources */,
+				AA98F08E2853DF7200F3855E /* DogViewModel.swift in Sources */,
+				AA98F0902853DFE800F3855E /* PetDetailView.swift in Sources */,
 				AA98F07B2853DC0500F3855E /* DogRepository.swift in Sources */,
 				AA98F03C2853DA0B00F3855E /* AppDelegate.swift in Sources */,
 				AA98F07D2853DC2100F3855E /* NetworkManager.swift in Sources */,
+				AA98F0882853DE3400F3855E /* PetView.swift in Sources */,
 				AA98F07F2853DC3200F3855E /* RequestProtocol.swift in Sources */,
 				AA98F0852853DDA700F3855E /* HomeViewController.swift in Sources */,
 				AA98F03E2853DA0B00F3855E /* SceneDelegate.swift in Sources */,
+				AA98F08A2853DEC300F3855E /* DogModel.swift in Sources */,
 				AA98F0772853DB8600F3855E /* Constants.swift in Sources */,
 				AA98F0812853DC5200F3855E /* ParameterEncoder.swift in Sources */,
 			);
@@ -478,7 +506,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -533,7 +561,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

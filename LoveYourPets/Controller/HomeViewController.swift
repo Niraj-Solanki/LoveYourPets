@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 class HomeViewController: UIViewController {
-
+    
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,12 @@ class HomeViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func dogAction(_ sender: UIButton) {
+        let viewModel = PetViewModel(networkManager: NetworkManagerImpl())
+        let contentView = FindYourPetView(viewModel: viewModel)
         
+        let findPetVC = UIHostingController(rootView: contentView)
+        findPetVC.modalPresentationStyle = .fullScreen
+        present(findPetVC, animated: true, completion: nil)
     }
     
     @IBAction func catAction(_ sender: UIButton) {
