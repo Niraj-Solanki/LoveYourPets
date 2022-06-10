@@ -16,6 +16,12 @@
 		AA98F05D2853DA0D00F3855E /* LoveYourPetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F05C2853DA0D00F3855E /* LoveYourPetsUITests.swift */; };
 		AA98F05F2853DA0D00F3855E /* LoveYourPetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F05E2853DA0D00F3855E /* LoveYourPetsUITestsLaunchTests.swift */; };
 		AA98F0752853DADC00F3855E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AA98F0742853DADC00F3855E /* SDWebImageSwiftUI */; };
+		AA98F0772853DB8600F3855E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0762853DB8600F3855E /* Constants.swift */; };
+		AA98F07B2853DC0500F3855E /* DogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F07A2853DC0500F3855E /* DogRepository.swift */; };
+		AA98F07D2853DC2100F3855E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F07C2853DC2100F3855E /* NetworkManager.swift */; };
+		AA98F07F2853DC3200F3855E /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F07E2853DC3200F3855E /* RequestProtocol.swift */; };
+		AA98F0812853DC5200F3855E /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0802853DC5200F3855E /* ParameterEncoder.swift */; };
+		AA98F0832853DC8500F3855E /* LystError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0822853DC8500F3855E /* LystError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,12 @@
 		AA98F0582853DA0D00F3855E /* LoveYourPetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoveYourPetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA98F05C2853DA0D00F3855E /* LoveYourPetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveYourPetsUITests.swift; sourceTree = "<group>"; };
 		AA98F05E2853DA0D00F3855E /* LoveYourPetsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveYourPetsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AA98F0762853DB8600F3855E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AA98F07A2853DC0500F3855E /* DogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepository.swift; sourceTree = "<group>"; };
+		AA98F07C2853DC2100F3855E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AA98F07E2853DC3200F3855E /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		AA98F0802853DC5200F3855E /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		AA98F0822853DC8500F3855E /* LystError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LystError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +111,14 @@
 		AA98F03A2853DA0B00F3855E /* LoveYourPets */ = {
 			isa = PBXGroup;
 			children = (
+				AA98F06E2853DA3600F3855E /* Assets */,
+				AA98F06F2853DA5500F3855E /* Constants */,
+				AA98F0782853DBA500F3855E /* NetworkManager */,
+				AA98F06C2853DA2000F3855E /* Controller */,
 				AA98F0722853DA6E00F3855E /* Model */,
 				AA98F0712853DA6700F3855E /* View */,
 				AA98F0702853DA5C00F3855E /* ViewModel */,
-				AA98F06F2853DA5500F3855E /* Constants */,
-				AA98F06E2853DA3600F3855E /* Assets */,
 				AA98F06D2853DA2B00F3855E /* Storyboards */,
-				AA98F06C2853DA2000F3855E /* Controller */,
 				AA98F06B2853DA1400F3855E /* Delegats */,
 				AA98F0492853DA0D00F3855E /* Info.plist */,
 			);
@@ -165,6 +178,7 @@
 		AA98F06F2853DA5500F3855E /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				AA98F0762853DB8600F3855E /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -188,6 +202,26 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AA98F0782853DBA500F3855E /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				AA98F0792853DBBB00F3855E /* DogRepository */,
+				AA98F07C2853DC2100F3855E /* NetworkManager.swift */,
+				AA98F07E2853DC3200F3855E /* RequestProtocol.swift */,
+				AA98F0802853DC5200F3855E /* ParameterEncoder.swift */,
+				AA98F0822853DC8500F3855E /* LystError.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		AA98F0792853DBBB00F3855E /* DogRepository */ = {
+			isa = PBXGroup;
+			children = (
+				AA98F07A2853DC0500F3855E /* DogRepository.swift */,
+			);
+			path = DogRepository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,8 +361,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA98F0832853DC8500F3855E /* LystError.swift in Sources */,
+				AA98F07B2853DC0500F3855E /* DogRepository.swift in Sources */,
 				AA98F03C2853DA0B00F3855E /* AppDelegate.swift in Sources */,
+				AA98F07D2853DC2100F3855E /* NetworkManager.swift in Sources */,
+				AA98F07F2853DC3200F3855E /* RequestProtocol.swift in Sources */,
 				AA98F03E2853DA0B00F3855E /* SceneDelegate.swift in Sources */,
+				AA98F0772853DB8600F3855E /* Constants.swift in Sources */,
+				AA98F0812853DC5200F3855E /* ParameterEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
