@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		AA98F03C2853DA0B00F3855E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F03B2853DA0B00F3855E /* AppDelegate.swift */; };
 		AA98F03E2853DA0B00F3855E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F03D2853DA0B00F3855E /* SceneDelegate.swift */; };
-		AA98F0402853DA0B00F3855E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F03F2853DA0B00F3855E /* ViewController.swift */; };
 		AA98F0432853DA0B00F3855E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA98F0412853DA0B00F3855E /* Main.storyboard */; };
 		AA98F0452853DA0D00F3855E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA98F0442853DA0D00F3855E /* Assets.xcassets */; };
 		AA98F0482853DA0D00F3855E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA98F0462853DA0D00F3855E /* LaunchScreen.storyboard */; };
 		AA98F0532853DA0D00F3855E /* LoveYourPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0522853DA0D00F3855E /* LoveYourPetsTests.swift */; };
 		AA98F05D2853DA0D00F3855E /* LoveYourPetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F05C2853DA0D00F3855E /* LoveYourPetsUITests.swift */; };
 		AA98F05F2853DA0D00F3855E /* LoveYourPetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F05E2853DA0D00F3855E /* LoveYourPetsUITestsLaunchTests.swift */; };
+		AA98F0752853DADC00F3855E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AA98F0742853DADC00F3855E /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		AA98F0382853DA0B00F3855E /* LoveYourPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveYourPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA98F03B2853DA0B00F3855E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA98F03D2853DA0B00F3855E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA98F03F2853DA0B00F3855E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA98F0422853DA0B00F3855E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA98F0442853DA0D00F3855E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA98F0472853DA0D00F3855E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA98F0752853DADC00F3855E /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +99,14 @@
 		AA98F03A2853DA0B00F3855E /* LoveYourPets */ = {
 			isa = PBXGroup;
 			children = (
-				AA98F03B2853DA0B00F3855E /* AppDelegate.swift */,
-				AA98F03D2853DA0B00F3855E /* SceneDelegate.swift */,
-				AA98F03F2853DA0B00F3855E /* ViewController.swift */,
-				AA98F0412853DA0B00F3855E /* Main.storyboard */,
-				AA98F0442853DA0D00F3855E /* Assets.xcassets */,
-				AA98F0462853DA0D00F3855E /* LaunchScreen.storyboard */,
+				AA98F0722853DA6E00F3855E /* Model */,
+				AA98F0712853DA6700F3855E /* View */,
+				AA98F0702853DA5C00F3855E /* ViewModel */,
+				AA98F06F2853DA5500F3855E /* Constants */,
+				AA98F06E2853DA3600F3855E /* Assets */,
+				AA98F06D2853DA2B00F3855E /* Storyboards */,
+				AA98F06C2853DA2000F3855E /* Controller */,
+				AA98F06B2853DA1400F3855E /* Delegats */,
 				AA98F0492853DA0D00F3855E /* Info.plist */,
 			);
 			path = LoveYourPets;
@@ -127,6 +129,67 @@
 			path = LoveYourPetsUITests;
 			sourceTree = "<group>";
 		};
+		AA98F06B2853DA1400F3855E /* Delegats */ = {
+			isa = PBXGroup;
+			children = (
+				AA98F03B2853DA0B00F3855E /* AppDelegate.swift */,
+				AA98F03D2853DA0B00F3855E /* SceneDelegate.swift */,
+			);
+			path = Delegats;
+			sourceTree = "<group>";
+		};
+		AA98F06C2853DA2000F3855E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AA98F06D2853DA2B00F3855E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AA98F0412853DA0B00F3855E /* Main.storyboard */,
+				AA98F0462853DA0D00F3855E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AA98F06E2853DA3600F3855E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AA98F0442853DA0D00F3855E /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		AA98F06F2853DA5500F3855E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AA98F0702853DA5C00F3855E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AA98F0712853DA6700F3855E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA98F0722853DA6E00F3855E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +206,9 @@
 			dependencies = (
 			);
 			name = LoveYourPets;
+			packageProductDependencies = (
+				AA98F0742853DADC00F3855E /* SDWebImageSwiftUI */,
+			);
 			productName = LoveYourPets;
 			productReference = AA98F0382853DA0B00F3855E /* LoveYourPets.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +281,9 @@
 				Base,
 			);
 			mainGroup = AA98F02F2853DA0B00F3855E;
+			packageReferences = (
+				AA98F0732853DADC00F3855E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = AA98F0392853DA0B00F3855E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +327,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA98F0402853DA0B00F3855E /* ViewController.swift in Sources */,
 				AA98F03C2853DA0B00F3855E /* AppDelegate.swift in Sources */,
 				AA98F03E2853DA0B00F3855E /* SceneDelegate.swift in Sources */,
 			);
@@ -366,13 +434,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -420,12 +489,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -596,6 +666,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA98F0732853DADC00F3855E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA98F0742853DADC00F3855E /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA98F0732853DADC00F3855E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA98F0302853DA0B00F3855E /* Project object */;
 }
