@@ -1,5 +1,5 @@
 //
-//  CatRepository.swift
+//  CatEndPoint.swift
 //  LoveYourPets
 //
 //  Created by Niraj Solanki on 11/06/22.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum CatRepository {
+enum CatEndPoint {
     case breeds(page: Int)
     case search(breed: String)
 }
 
-extension CatRepository: APIRepository {
+extension CatEndPoint: EndPoint {
     
     struct AnimalKeys {
         static let ApiKey = "x-api-key"

@@ -6,10 +6,12 @@
 //
 
 import Foundation
-struct CatModel : Codable, Hashable {
+struct CatModel : Codable, Hashable, AnimalModel {
+    
+    var itemId: String?
     let weight : Weight?
     let id : String?
-    let name : String?
+    var name : String?
     let cfa_url : String?
     let vetstreet_url : String?
     let vcahospitals_url : String?
@@ -43,11 +45,11 @@ struct CatModel : Codable, Hashable {
     let short_legs : Int?
     let wikipedia_url : String?
     let hypoallergenic : Int?
-    let imageRefId : String?
+    var imageRefId : String?
     let image : PetImage?
-
+    
     enum CodingKeys: String, CodingKey {
-
+        
         case weight = "weight"
         case id = "id"
         case name = "name"
@@ -87,7 +89,7 @@ struct CatModel : Codable, Hashable {
         case imageRefId = "reference_image_id"
         case image = "image"
     }
-
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         weight = try values.decodeIfPresent(Weight.self, forKey: .weight)
@@ -128,6 +130,8 @@ struct CatModel : Codable, Hashable {
         hypoallergenic = try values.decodeIfPresent(Int.self, forKey: .hypoallergenic)
         imageRefId = try values.decodeIfPresent(String.self, forKey: .imageRefId)
         image = try values.decodeIfPresent(PetImage.self, forKey: .image)
+        
+        itemId = id
     }
-
+    
 }

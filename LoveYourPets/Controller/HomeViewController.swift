@@ -17,8 +17,8 @@ class HomeViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func dogAction(_ sender: UIButton) {
-        let viewModel = FindYourDogViewModel(networkManager: NetworkManagerImpl())
-        let contentView = FindYourDogView(viewModel: viewModel)
+        let viewModel = FindYourPetViewModel<DogModel>(repository: DogRepository(), animalType: .dog)
+        let contentView = FindYourPetView(viewModel: viewModel)
         
         let findPetVC = UIHostingController(rootView: contentView)
         findPetVC.modalPresentationStyle = .fullScreen
@@ -26,8 +26,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func catAction(_ sender: UIButton) {
-        let viewModel = CatViewModel(networkManager: NetworkManagerImpl())
-        let contentView = FindYourCatView(viewModel: viewModel)
+        let viewModel = FindYourPetViewModel<CatModel>(repository: CatRepository(), animalType: .cat)
+        let contentView = FindYourPetView(viewModel: viewModel)
         
         let findPetVC = UIHostingController(rootView: contentView)
         findPetVC.modalPresentationStyle = .fullScreen

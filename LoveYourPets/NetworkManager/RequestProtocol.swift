@@ -17,12 +17,3 @@ enum HTTPMethod: String {
     case patch = "PATCH"
     case delete  = "DELETE"
 }
-
-protocol APIRepository {
-    var baseURL: URL { get }
-    var path: String { get }
-    var httpMethod: HTTPMethod { get }
-    var parameters: Parameters? { get }
-    var headers: HTTPHeaders? { get }
-    var encoding: RequestEncoder {get}
-}

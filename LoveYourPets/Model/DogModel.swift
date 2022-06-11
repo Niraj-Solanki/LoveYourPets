@@ -7,17 +7,19 @@
 
 import Foundation
 
-struct DogModel : Codable, Hashable {
+struct DogModel : Codable, Hashable, AnimalModel {
+
+    var itemId: String?
     let weight : Weight?
     let height : Height?
     let id : Int?
-    let name : String?
+    var name : String?
     let bred_for : String?
     let breed_group : String?
     let life_span : String?
     let temperament : String?
     let origin : String?
-    let imageRefId : String?
+    var imageRefId : String?
     let image : PetImage?
 
     enum CodingKeys: String, CodingKey {
@@ -47,6 +49,8 @@ struct DogModel : Codable, Hashable {
         origin = try values.decodeIfPresent(String.self, forKey: .origin)
         imageRefId = try values.decodeIfPresent(String.self, forKey: .imageRefId)
         image = try values.decodeIfPresent(PetImage.self, forKey: .image)
+        
+        itemId = "\(String(describing: id))"
     }
 
 }

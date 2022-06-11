@@ -1,5 +1,5 @@
 //
-//  DogRepository.swift
+//  DogEndPoint.swift
 //  LoveYourPets
 //
 //  Created by Niraj Solanki on 11/06/22.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum DogRepository {
+enum DogEndPoint {
     case breeds(page: Int)
     case search(breed: String)
 }
 
-extension DogRepository: APIRepository {
+extension DogEndPoint: EndPoint {
     
     struct AnimalKeys {
         static let ApiKey = "x-api-key"
@@ -37,7 +37,7 @@ extension DogRepository: APIRepository {
             return "breeds/search"
         }
     }
-
+    
     var parameters: Parameters? {
         var params: Parameters = [:]
         

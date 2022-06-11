@@ -8,20 +8,20 @@
 import Foundation
 
 protocol NetworkManager {
-    func request<T: Codable>(repository: APIRepository, completion: ((Result<T, LystError>) -> Void)?)
+    func request<T: Codable>(endPoint: EndPoint, completion: ((Result<T, LystError>) -> Void)?)
 }
 
 class NetworkManagerImpl : NetworkManager {
-    func request<T: Codable>(repository: APIRepository, completion: ((Result<T, LystError>) -> Void)?) {
+    func request<T: Codable>(endPoint: EndPoint, completion: ((Result<T, LystError>) -> Void)?) {
         
-        var urlRequest = URLRequest(url: repository.baseURL.appendingPathComponent(repository.path),
+        var urlRequest = URLRequest(url: endPoint.baseURL.appendingPathComponent(endPoint.path),
                                     cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
                                     timeoutInterval: Constants.timeout)
-        urlRequest.httpMethod = repository.httpMethod.rawValue
+        urlRequest.httpMethod = endPoint.httpMethod.rawValue
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         do{
-            try repository.encoding.encode(urlRequest: &urlRequest, with: repository.parameters ?? Parameters())
+            try endPoint.encoding.encode(urlRequest: &urlRequest, with: endPoint.parameters ?? Parameters())
         }
         catch{
             completion?(Result.failure(LystError("Encoding failed")))

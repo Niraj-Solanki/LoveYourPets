@@ -7,9 +7,11 @@
 
 import Foundation
 
-class FindYourDogViewModel: ObservableObject {
-    @Published var items: [DogModel] = []
-    @Published var breedList: [DogModel] = [] {
+class FindYourPetViewModel <T: AnimalModel>: ObservableObject {
+    
+    // MARK: Properties
+    @Published var items: [T] = []
+    @Published var breedList: [T] = [] {
         didSet {
             items = breedList
         }
@@ -19,31 +21,44 @@ class FindYourDogViewModel: ObservableObject {
     private var searchtext  = ""
     var searchTimer: Timer?
     
-    var networkManager: NetworkManager
+    let repository: AnimalRepository
+    let animalType: AnimalType
     
-    init(networkManager: NetworkManager) {
-        self.networkManager = networkManager
+    // MARK: Initializer
+    init(repository: AnimalRepository, animalType: AnimalType) {
+        self.repository = repository
+        self.animalType = animalType
         fetchBreeds()
     }
     
     var title: String {
-        return "Find Your Dog"
+        animalType.title
     }
     
     var prompt: String {
-        return "🐶 Bhow Bhow (find me 🐾)"
+        animalType.searchPromp
     }
     
-    func loadMoreContentIfNeeded(currentItem item: DogModel) {
+    func imageUrl(_ refId: String?) -> String {
+        switch animalType {
+        case .dog:
+            return Constants.Dog.imageUrl(for: refId)
+        case .cat:
+            return Constants.Cat.imageUrl(for: refId)
+        }
+    }
+    
+    func loadMoreContentIfNeeded(currentItem item: T) {
         guard searchtext.isEmpty else { return }
         
         let thresholdIndex = items.index(items.endIndex, offsetBy: -5)
-        if items.firstIndex(where: { $0.id == item.id }) == thresholdIndex {
+        if items.firstIndex(where: { $0.itemId == item.itemId }) == thresholdIndex {
             currentPage += 1
             fetchBreeds()
         }
     }
     
+    // MARK: Search
     func searchBreeds(by name: String) {
         searchtext = name
         searchTimer?.invalidate()
@@ -53,19 +68,23 @@ class FindYourDogViewModel: ObservableObject {
             items = breedList
         } else {
             searchTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (timer) in
-                //do Something crazy
                 self.fetchBreed(by: self.searchtext)
             })
         }
     }
     
+}
+
+// MARK: Repository Work
+extension FindYourPetViewModel {
+    
     private func fetchBreed(by name: String) {
-        let breedSearchAPI = DogRepository.search(breed: name)
-        networkManager.request(repository: breedSearchAPI) { [weak self] (result: Result<[DogModel], LystError>) in
+        repository.fetchBreed(by: name) {
+            [weak self] (result: Result<[T], LystError>) in
             switch result {
-            case .success(let dogModels):
+            case .success(let petModels):
                 DispatchQueue.main.async {
-                    self?.items = dogModels
+                    self?.items = petModels
                 }
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
@@ -74,13 +93,12 @@ class FindYourDogViewModel: ObservableObject {
     }
     
     func fetchBreeds() {
-        print("Page: \(currentPage)")
-        let breedsAPI = DogRepository.breeds(page: currentPage)
-        networkManager.request(repository: breedsAPI) { [weak self] (result: Result<[DogModel], LystError>) in
+        repository.fetchBreed(page: currentPage) {
+            [weak self] (result: Result<[T], LystError>) in
             switch result {
-            case .success(let dogModels):
+            case .success(let petModels):
                 DispatchQueue.main.async {
-                    self?.breedList.append(contentsOf: dogModels)
+                    self?.breedList.append(contentsOf: petModels)
                 }
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")

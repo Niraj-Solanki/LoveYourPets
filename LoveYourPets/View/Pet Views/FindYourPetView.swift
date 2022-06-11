@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct FindYourDogView: View {
+struct FindYourPetView<T: AnimalModel>: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var viewModel: FindYourDogViewModel
+    @ObservedObject var viewModel: FindYourPetViewModel<T>
     @State var searchText = ""
     
     var gridLayout = Array(repeating: GridItem(), count: 3)
@@ -22,9 +22,9 @@ struct FindYourDogView: View {
                 LazyVGrid(columns: gridLayout) {
                     ForEach(viewModel.items, id: \.self) { breed in
                         
-                        NavigationLink(destination: DogDetailView(viewModel: breed)) {
+                        NavigationLink(destination: CatDetailView(viewModel: breed as? CatModel)) {
                             PetView(
-                                imageUrl: Constants.Dog.imageUrl(for: breed.imageRefId),
+                                imageUrl: viewModel.imageUrl(breed.imageRefId),
                                 breedName: breed.name)
                         }
                         .onAppear {
@@ -57,7 +57,7 @@ struct FindYourDogView: View {
 struct FindYourPetView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            FindYourDogView(viewModel: FindYourDogViewModel(networkManager: NetworkManagerImpl()))
+            FindYourPetView(viewModel: FindYourPetViewModel<CatModel>(repository: CatRepository(), animalType: .cat))
         }
     }
 }
