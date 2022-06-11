@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DogViewModel: ObservableObject {
+class FindYourDogViewModel: ObservableObject {
     @Published var items: [DogModel] = []
     @Published var breedList: [DogModel] = [] {
         didSet {

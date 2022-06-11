@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PetView: View {
     var imageUrl: String
-    var breedName: String
+    var breedName: String?
     
     var body: some View {
         VStack {
@@ -21,7 +21,7 @@ struct PetView: View {
                 .aspectRatio(contentMode: .fill)
                 .cornerRadius(50)
             
-            Text(breedName)
+            Text(breedName ?? "")
                 .font(AppFont.common(size: 14))
                 .foregroundColor(.black)
                 .lineLimit(2)

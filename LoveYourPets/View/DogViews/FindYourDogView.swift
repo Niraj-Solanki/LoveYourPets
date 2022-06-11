@@ -10,7 +10,7 @@ import SwiftUI
 struct FindYourDogView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var viewModel: DogViewModel
+    @ObservedObject var viewModel: FindYourDogViewModel
     @State var searchText = ""
     
     var gridLayout = Array(repeating: GridItem(), count: 3)
@@ -24,8 +24,8 @@ struct FindYourDogView: View {
                         
                         NavigationLink(destination: DogDetailView(viewModel: breed)) {
                             PetView(
-                                imageUrl: "\(Constants.Dog.imageURL)\(breed.imageRefId ?? "").jpg",
-                                breedName: breed.name ?? "")
+                                imageUrl: Constants.Dog.imageUrl(for: breed.imageRefId),
+                                breedName: breed.name)
                         }
                         .onAppear {
                             viewModel.loadMoreContentIfNeeded(currentItem: breed)
@@ -57,7 +57,7 @@ struct FindYourDogView: View {
 struct FindYourPetView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            FindYourDogView(viewModel: DogViewModel(networkManager: NetworkManagerImpl()))
+            FindYourDogView(viewModel: FindYourDogViewModel(networkManager: NetworkManagerImpl()))
         }
     }
 }

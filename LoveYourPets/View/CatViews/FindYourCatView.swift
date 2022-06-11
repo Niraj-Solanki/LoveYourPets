@@ -24,7 +24,7 @@ struct FindYourCatView: View {
                         
                         NavigationLink(destination: CatDetailView(viewModel: breed)) {
                             PetView(
-                                imageUrl: "\(Constants.Cat.imageURL)\(breed.imageRefId ?? "").jpg",
+                                imageUrl: Constants.Cat.imageUrl(for: breed.imageRefId),
                                 breedName: breed.name ?? "")
                         }
                         .onAppear {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA5A9179285491500031D642 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A9178285491500031D642 /* WebView.swift */; };
 		AA98F03C2853DA0B00F3855E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F03B2853DA0B00F3855E /* AppDelegate.swift */; };
 		AA98F03E2853DA0B00F3855E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F03D2853DA0B00F3855E /* SceneDelegate.swift */; };
 		AA98F0432853DA0B00F3855E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA98F0412853DA0B00F3855E /* Main.storyboard */; };
@@ -26,7 +27,7 @@
 		AA98F0882853DE3400F3855E /* PetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0872853DE3400F3855E /* PetView.swift */; };
 		AA98F08A2853DEC300F3855E /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0892853DEC300F3855E /* DogModel.swift */; };
 		AA98F08C2853DF1200F3855E /* FindYourDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F08B2853DF1200F3855E /* FindYourDogView.swift */; };
-		AA98F08E2853DF7200F3855E /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F08D2853DF7200F3855E /* DogViewModel.swift */; };
+		AA98F08E2853DF7200F3855E /* FindYourDogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F08D2853DF7200F3855E /* FindYourDogViewModel.swift */; };
 		AA98F0902853DFE800F3855E /* DogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F08F2853DFE800F3855E /* DogDetailView.swift */; };
 		AA98F0932853E2A400F3855E /* CatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0922853E2A400F3855E /* CatRepository.swift */; };
 		AA98F0952853E67C00F3855E /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0942853E67C00F3855E /* CatModel.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA5A9178285491500031D642 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		AA98F0382853DA0B00F3855E /* LoveYourPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveYourPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA98F03B2853DA0B00F3855E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA98F03D2853DA0B00F3855E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +77,7 @@
 		AA98F0872853DE3400F3855E /* PetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetView.swift; sourceTree = "<group>"; };
 		AA98F0892853DEC300F3855E /* DogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogModel.swift; sourceTree = "<group>"; };
 		AA98F08B2853DF1200F3855E /* FindYourDogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourDogView.swift; sourceTree = "<group>"; };
-		AA98F08D2853DF7200F3855E /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
+		AA98F08D2853DF7200F3855E /* FindYourDogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourDogViewModel.swift; sourceTree = "<group>"; };
 		AA98F08F2853DFE800F3855E /* DogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailView.swift; sourceTree = "<group>"; };
 		AA98F0922853E2A400F3855E /* CatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatRepository.swift; sourceTree = "<group>"; };
 		AA98F0942853E67C00F3855E /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
@@ -209,7 +211,7 @@
 		AA98F0702853DA5C00F3855E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				AA98F08D2853DF7200F3855E /* DogViewModel.swift */,
+				AA98F08D2853DF7200F3855E /* FindYourDogViewModel.swift */,
 				AA98F09E2853F15000F3855E /* CatViewModel.swift */,
 			);
 			path = ViewModel;
@@ -221,6 +223,7 @@
 				AA98F09B2853F06C00F3855E /* CatViews */,
 				AA98F09A2853F02F00F3855E /* DogViews */,
 				AA98F0862853DE2700F3855E /* PetView */,
+				AA5A9178285491500031D642 /* WebView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -427,9 +430,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA98F08C2853DF1200F3855E /* FindYourDogView.swift in Sources */,
+				AA5A9179285491500031D642 /* WebView.swift in Sources */,
 				AA98F0832853DC8500F3855E /* LystError.swift in Sources */,
 				AA98F0952853E67C00F3855E /* CatModel.swift in Sources */,
-				AA98F08E2853DF7200F3855E /* DogViewModel.swift in Sources */,
+				AA98F08E2853DF7200F3855E /* FindYourDogViewModel.swift in Sources */,
 				AA98F09D2853F08A00F3855E /* CatDetailView.swift in Sources */,
 				AA98F0902853DFE800F3855E /* DogDetailView.swift in Sources */,
 				AA98F09F2853F15000F3855E /* CatViewModel.swift in Sources */,

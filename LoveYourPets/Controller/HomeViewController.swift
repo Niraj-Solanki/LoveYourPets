@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func dogAction(_ sender: UIButton) {
-        let viewModel = DogViewModel(networkManager: NetworkManagerImpl())
+        let viewModel = FindYourDogViewModel(networkManager: NetworkManagerImpl())
         let contentView = FindYourDogView(viewModel: viewModel)
         
         let findPetVC = UIHostingController(rootView: contentView)
