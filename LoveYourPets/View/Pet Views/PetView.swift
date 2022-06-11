@@ -33,8 +33,7 @@ struct PetView: View {
 
 struct PetView_Previews: PreviewProvider {
     static var previews: some View {
-        PetView(
-            imageUrl: "https://thumbs.dreamstime.com/b/dog-listening-big-ear-27392035.jpg",
-            breedName: "Dog")
+        PetView(imageUrl: "", breedName: "Dog")
+            .previewLayout(.fixed(width: 100, height: 150))
     }
 }

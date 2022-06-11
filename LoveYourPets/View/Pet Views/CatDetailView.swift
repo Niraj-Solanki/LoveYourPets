@@ -9,7 +9,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct CatDetailView: View {
-    var viewModel: CatModel?
+    var viewModel: CatViewModel
     @State private var showWikiPage = false
     
     var body: some View {
@@ -19,9 +19,10 @@ struct CatDetailView: View {
                 VStack {
                     
                     Group {
-                        Text(viewModel?.description ?? "Description")
+                        Text(viewModel.description)
                         
-                        WebImage(url: URL(string: Constants.Cat.imageUrl(for: viewModel?.imageRefId)))
+                        WebImage(url: viewModel.imageUrl)
+                            .placeholder(Image("pets"))
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: geo.size.width - 30, height: geo.size.height * 0.3, alignment: .center)
@@ -35,13 +36,13 @@ struct CatDetailView: View {
                             VStack(spacing: 10) {
                                 Text("Lifespan")
                                     .font(AppFont.common(size: 15, weight: .semibold))
-                                Text("\(viewModel?.life_span ?? "") Years")
+                                Text(viewModel.lifespan)
                             }
                             
                             VStack(spacing: 10) {
                                 Text("Energy Level")
                                     .font(AppFont.common(size: 15, weight: .semibold))
-                                Text("\(viewModel?.energy_level ?? 0)")
+                                Text(viewModel.enerygLevel)
                             }
                         }
                         .font(AppFont.common(size: 14))
@@ -53,7 +54,7 @@ struct CatDetailView: View {
                             .font(AppFont.common(size: 15, weight: .semibold))
                             .frame(width: geo.size.width * 0.3, alignment: .top)
                         
-                        Text(viewModel?.temperament ?? "")
+                        Text(viewModel.temprament)
                             .frame(width: geo.size.width * 0.6, alignment: .center)
                             .multilineTextAlignment(.center)
                     }
@@ -66,22 +67,23 @@ struct CatDetailView: View {
                     }
                     .padding()
                     .sheet(isPresented: $showWikiPage) {
-                        WebView(url: URL(string: viewModel?.wikipedia_url ?? "")!)
+                        WebView(url: viewModel.wikipediaUrl)
                     }
                     
                 }
-                .shadow(color: .gray, radius: 5, x: 1, y: 1)
-                .navigationTitle(viewModel?.name ?? "")
-                .font(AppFont.common(size: 15))
                 .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        HStack {
+                            Text(viewModel.title).font(AppFont.common(size: 18, weight: .bold))
+                        }
+                    }
+                }
+                .shadow(color: .gray, radius: 5, x: 1, y: 1)
+                .font(AppFont.common(size: 15))
             }
         }
         
     }
 }
 
-struct CatDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        CatDetailView(viewModel: nil)
-    }
-}

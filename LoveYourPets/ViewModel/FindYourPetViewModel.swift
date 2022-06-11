@@ -11,7 +11,7 @@ class FindYourPetViewModel <T: AnimalModel>: ObservableObject {
     
     // MARK: Properties
     @Published var items: [T] = []
-    @Published var breedList: [T] = [] {
+    private var breedList: [T] = [] {
         didSet {
             items = breedList
         }
@@ -19,10 +19,10 @@ class FindYourPetViewModel <T: AnimalModel>: ObservableObject {
     
     private var currentPage = 0
     private var searchtext  = ""
-    var searchTimer: Timer?
+    private var searchTimer: Timer?
     
-    let repository: AnimalRepository
-    let animalType: AnimalType
+    private let repository: AnimalRepository
+    private let animalType: AnimalType
     
     // MARK: Initializer
     init(repository: AnimalRepository, animalType: AnimalType) {

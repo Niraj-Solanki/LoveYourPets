@@ -28,9 +28,9 @@ enum AnimalType {
     var title: String {
         switch self {
         case .dog:
-            return "Find your dog"
+            return "Find Your Dog 🐶"
         case .cat:
-            return "Find your cat"
+            return "Find Your Cat 🐱"
         }
     }
 }

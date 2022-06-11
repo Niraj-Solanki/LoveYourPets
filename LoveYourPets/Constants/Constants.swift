@@ -37,6 +37,5 @@ struct Constants {
 struct AppFont {
     static func common(size: CGFloat, weight: Font.Weight? = .regular) -> Font {
         return Font.custom("Euphemia UCAS", size: size).weight(weight ?? .regular)
-        
     }
 }

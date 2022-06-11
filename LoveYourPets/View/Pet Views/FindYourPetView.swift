@@ -22,7 +22,7 @@ struct FindYourPetView<T: AnimalModel>: View {
                 LazyVGrid(columns: gridLayout) {
                     ForEach(viewModel.items, id: \.self) { breed in
                         
-                        NavigationLink(destination: CatDetailView(viewModel: breed as? CatModel)) {
+                        NavigationLink(destination: AnimalView(animalModel: breed)) {
                             PetView(
                                 imageUrl: viewModel.imageUrl(breed.imageRefId),
                                 breedName: breed.name)
@@ -32,10 +32,16 @@ struct FindYourPetView<T: AnimalModel>: View {
                         }
                     }
                 }
-                
             }
-            .navigationTitle(viewModel.title)
+            
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        Text(viewModel.title).font(AppFont.common(size: 18, weight: .bold))
+                    }
+                }
+            }
             .toolbar {
                 Image("home")
                     .resizable()

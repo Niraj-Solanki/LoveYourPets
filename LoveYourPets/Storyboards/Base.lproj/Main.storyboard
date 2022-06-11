@@ -12,7 +12,7 @@
         <!--Home View Controller-->
         <scene sceneID="vEP-Nf-6aC">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="Td7-ex-XT9" customClass="HomeViewController" customModule="Lyst" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="Td7-ex-XT9" customClass="HomeViewController" customModule="LoveYourPets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wrM-QE-Wxy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,9 +59,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pets" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-pG-KVs">
-                                        <rect key="frame" x="0.0" y="484" width="375" height="300"/>
+                                        <rect key="frame" x="0.0" y="534" width="375" height="250"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="dNv-hS-lCH"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="dNv-hS-lCH"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXN-8D-uM2">

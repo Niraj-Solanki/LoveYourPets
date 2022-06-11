@@ -8,7 +8,7 @@
 import Foundation
 
 struct DogRepository: AnimalRepository {
-    let networkManager = NetworkManagerImpl()
+    private let networkManager = NetworkManagerImpl()
     
     func fetchBreed<T>(by name: String, completion: @escaping ((Result<[T], LystError>) -> Void)) where T : Decodable, T : Encodable {
         let breedSearch = DogEndPoint.search(breed: name)
