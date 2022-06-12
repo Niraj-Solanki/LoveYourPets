@@ -63,7 +63,7 @@ struct CatDetailView: View {
                     Button {
                         showWikiPage.toggle()
                     } label: {
-                        Text("Check my Wikipedia 🐾")
+                        Text("Check My Wikipedia 🐾")
                     }
                     .padding()
                     .sheet(isPresented: $showWikiPage) {

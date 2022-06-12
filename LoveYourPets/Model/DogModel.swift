@@ -9,18 +9,22 @@ import Foundation
 
 struct DogModel : Codable, Hashable, AnimalModel {
 
-    var itemId: String?
     let weight : Weight?
     let height : Height?
     let id : Int?
-    var name : String?
     let bred_for : String?
     let breed_group : String?
     let life_span : String?
     let temperament : String?
     let origin : String?
-    var imageRefId : String?
     let image : PetImage?
+    
+    //Override Properties
+    var name : String?
+    var imageRefId : String?
+    
+    //Custom Property
+    var itemId: String? { return "\(String(describing: id))" }
 
     enum CodingKeys: String, CodingKey {
         case weight = "weight"
@@ -35,24 +39,6 @@ struct DogModel : Codable, Hashable, AnimalModel {
         case imageRefId = "reference_image_id"
         case image = "image"
     }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        weight = try values.decodeIfPresent(Weight.self, forKey: .weight)
-        height = try values.decodeIfPresent(Height.self, forKey: .height)
-        id = try values.decodeIfPresent(Int.self, forKey: .id)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        bred_for = try values.decodeIfPresent(String.self, forKey: .bred_for)
-        breed_group = try values.decodeIfPresent(String.self, forKey: .breed_group)
-        life_span = try values.decodeIfPresent(String.self, forKey: .life_span)
-        temperament = try values.decodeIfPresent(String.self, forKey: .temperament)
-        origin = try values.decodeIfPresent(String.self, forKey: .origin)
-        imageRefId = try values.decodeIfPresent(String.self, forKey: .imageRefId)
-        image = try values.decodeIfPresent(PetImage.self, forKey: .image)
-        
-        itemId = "\(String(describing: id))"
-    }
-
 }
 
 
@@ -68,15 +54,6 @@ struct PetImage : Codable, Hashable {
         case height = "height"
         case url = "url"
     }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(String.self, forKey: .id)
-        width = try values.decodeIfPresent(Int.self, forKey: .width)
-        height = try values.decodeIfPresent(Int.self, forKey: .height)
-        url = try values.decodeIfPresent(String.self, forKey: .url)
-    }
-
 }
 
 
@@ -88,13 +65,6 @@ struct Height : Codable, Hashable {
         case imperial = "imperial"
         case metric = "metric"
     }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        imperial = try values.decodeIfPresent(String.self, forKey: .imperial)
-        metric = try values.decodeIfPresent(String.self, forKey: .metric)
-    }
-
 }
 
 
@@ -106,11 +76,4 @@ struct Weight : Codable, Hashable {
         case imperial = "imperial"
         case metric = "metric"
     }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        imperial = try values.decodeIfPresent(String.self, forKey: .imperial)
-        metric = try values.decodeIfPresent(String.self, forKey: .metric)
-    }
-
 }

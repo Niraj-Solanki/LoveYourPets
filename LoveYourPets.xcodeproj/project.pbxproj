@@ -16,14 +16,48 @@
 		AA5A91852854B7070031D642 /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A91842854B7070031D642 /* AnimalView.swift */; };
 		AA5A91872854BA400031D642 /* CatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A91862854BA400031D642 /* CatViewModel.swift */; };
 		AA5A91892854C81C0031D642 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5A91882854C81C0031D642 /* Color.xcassets */; };
+		AA5A919B2855BE7B0031D642 /* PetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0872853DE3400F3855E /* PetView.swift */; };
+		AA5A919F2855C0060031D642 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0762853DB8600F3855E /* Constants.swift */; };
+		AA5A91A32855C0900031D642 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = AA5A91A22855C0900031D642 /* SnapshotTesting */; };
+		AA5A91A528561BED0031D642 /* HomeViewControllerSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A91A428561BED0031D642 /* HomeViewControllerSnapshotTest.swift */; };
+		AA5A91A628561BF60031D642 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0842853DDA700F3855E /* HomeViewController.swift */; };
+		AA5A91A728561CAA0031D642 /* FindYourPetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F08D2853DF7200F3855E /* FindYourPetViewModel.swift */; };
+		AA5A91A828561CB10031D642 /* FindYourPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F08B2853DF1200F3855E /* FindYourPetView.swift */; };
+		AA5A91A928561CBA0031D642 /* DogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F07A2853DC0500F3855E /* DogRepository.swift */; };
+		AA5A91AA28561CC00031D642 /* CatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0922853E2A400F3855E /* CatRepository.swift */; };
+		AA5A91AB28561EF10031D642 /* AnimalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A91822854B44A0031D642 /* AnimalRepository.swift */; };
+		AA5A91AC28561EF50031D642 /* DogEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A917C2854B3F80031D642 /* DogEndPoint.swift */; };
+		AA5A91AD28561EF80031D642 /* CatEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A917E2854B4040031D642 /* CatEndPoint.swift */; };
+		AA5A91AE28561EFB0031D642 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A91802854B4270031D642 /* EndPoint.swift */; };
+		AA5A91AF28561EFD0031D642 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F07C2853DC2100F3855E /* NetworkManager.swift */; };
+		AA5A91B028561F000031D642 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F07E2853DC3200F3855E /* RequestProtocol.swift */; };
+		AA5A91B128561F020031D642 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0802853DC5200F3855E /* ParameterEncoder.swift */; };
+		AA5A91B228561F050031D642 /* LystError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0822853DC8500F3855E /* LystError.swift */; };
+		AA5A91B328561F0D0031D642 /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0942853E67C00F3855E /* CatModel.swift */; };
+		AA5A91B428561F0D0031D642 /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0892853DEC300F3855E /* DogModel.swift */; };
+		AA5A91B528561F0D0031D642 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A917A285497AD0031D642 /* AnimalModel.swift */; };
+		AA5A91B628561F130031D642 /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A91842854B7070031D642 /* AnimalView.swift */; };
+		AA5A91B728561F130031D642 /* CatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F09C2853F08A00F3855E /* CatDetailView.swift */; };
+		AA5A91B828561F130031D642 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A9178285491500031D642 /* WebView.swift */; };
+		AA5A91B928561F170031D642 /* CatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A91862854BA400031D642 /* CatViewModel.swift */; };
+		AA5A91BA28561F200031D642 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F03D2853DA0B00F3855E /* SceneDelegate.swift */; };
+		AA5A91BB28561F200031D642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F03B2853DA0B00F3855E /* AppDelegate.swift */; };
+		AA5A91BD285627850031D642 /* PetViewSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A91BC285627850031D642 /* PetViewSnapshotTest.swift */; };
+		AA785B17285632F400150616 /* FindYourPetViewSnaphotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA785B16285632F400150616 /* FindYourPetViewSnaphotTest.swift */; };
+		AA785B1A2856339100150616 /* DogRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA785B192856339100150616 /* DogRepositoryMock.swift */; };
+		AA785B1E285633FB00150616 /* DogModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA785B1D285633FB00150616 /* DogModelMock.swift */; };
+		AA785B2128563D2000150616 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA785B2028563D2000150616 /* Stubs.swift */; };
+		AA785B252856496E00150616 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA785B2028563D2000150616 /* Stubs.swift */; };
+		AA785B27285653B600150616 /* CatRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA785B26285653B600150616 /* CatRepositoryMock.swift */; };
+		AA785B29285656CC00150616 /* CatDetailViewSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA785B28285656CC00150616 /* CatDetailViewSnapshotTest.swift */; };
+		AA785B2B28565C0B00150616 /* FindYourPetsUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA785B2A28565C0B00150616 /* FindYourPetsUnitTest.swift */; };
+		AA785B2D285660B400150616 /* CatDetailViewUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA785B2C285660B400150616 /* CatDetailViewUnitTest.swift */; };
 		AA98F03C2853DA0B00F3855E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F03B2853DA0B00F3855E /* AppDelegate.swift */; };
 		AA98F03E2853DA0B00F3855E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F03D2853DA0B00F3855E /* SceneDelegate.swift */; };
 		AA98F0432853DA0B00F3855E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA98F0412853DA0B00F3855E /* Main.storyboard */; };
 		AA98F0452853DA0D00F3855E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA98F0442853DA0D00F3855E /* Assets.xcassets */; };
 		AA98F0482853DA0D00F3855E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA98F0462853DA0D00F3855E /* LaunchScreen.storyboard */; };
 		AA98F0532853DA0D00F3855E /* LoveYourPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0522853DA0D00F3855E /* LoveYourPetsTests.swift */; };
-		AA98F05D2853DA0D00F3855E /* LoveYourPetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F05C2853DA0D00F3855E /* LoveYourPetsUITests.swift */; };
-		AA98F05F2853DA0D00F3855E /* LoveYourPetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F05E2853DA0D00F3855E /* LoveYourPetsUITestsLaunchTests.swift */; };
 		AA98F0752853DADC00F3855E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AA98F0742853DADC00F3855E /* SDWebImageSwiftUI */; };
 		AA98F0772853DB8600F3855E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F0762853DB8600F3855E /* Constants.swift */; };
 		AA98F07B2853DC0500F3855E /* DogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98F07A2853DC0500F3855E /* DogRepository.swift */; };
@@ -49,13 +83,6 @@
 			remoteGlobalIDString = AA98F0372853DA0B00F3855E;
 			remoteInfo = LoveYourPets;
 		};
-		AA98F0592853DA0D00F3855E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA98F0302853DA0B00F3855E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AA98F0372853DA0B00F3855E;
-			remoteInfo = LoveYourPets;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +95,16 @@
 		AA5A91842854B7070031D642 /* AnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalView.swift; sourceTree = "<group>"; };
 		AA5A91862854BA400031D642 /* CatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewModel.swift; sourceTree = "<group>"; };
 		AA5A91882854C81C0031D642 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		AA5A91A428561BED0031D642 /* HomeViewControllerSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSnapshotTest.swift; sourceTree = "<group>"; };
+		AA5A91BC285627850031D642 /* PetViewSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewSnapshotTest.swift; sourceTree = "<group>"; };
+		AA785B16285632F400150616 /* FindYourPetViewSnaphotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourPetViewSnaphotTest.swift; sourceTree = "<group>"; };
+		AA785B192856339100150616 /* DogRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepositoryMock.swift; sourceTree = "<group>"; };
+		AA785B1D285633FB00150616 /* DogModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogModelMock.swift; sourceTree = "<group>"; };
+		AA785B2028563D2000150616 /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
+		AA785B26285653B600150616 /* CatRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatRepositoryMock.swift; sourceTree = "<group>"; };
+		AA785B28285656CC00150616 /* CatDetailViewSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailViewSnapshotTest.swift; sourceTree = "<group>"; };
+		AA785B2A28565C0B00150616 /* FindYourPetsUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourPetsUnitTest.swift; sourceTree = "<group>"; };
+		AA785B2C285660B400150616 /* CatDetailViewUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailViewUnitTest.swift; sourceTree = "<group>"; };
 		AA98F0382853DA0B00F3855E /* LoveYourPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveYourPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA98F03B2853DA0B00F3855E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA98F03D2853DA0B00F3855E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,9 +114,6 @@
 		AA98F0492853DA0D00F3855E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA98F04E2853DA0D00F3855E /* LoveYourPetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoveYourPetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA98F0522853DA0D00F3855E /* LoveYourPetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveYourPetsTests.swift; sourceTree = "<group>"; };
-		AA98F0582853DA0D00F3855E /* LoveYourPetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoveYourPetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA98F05C2853DA0D00F3855E /* LoveYourPetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveYourPetsUITests.swift; sourceTree = "<group>"; };
-		AA98F05E2853DA0D00F3855E /* LoveYourPetsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveYourPetsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AA98F0762853DB8600F3855E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AA98F07A2853DC0500F3855E /* DogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepository.swift; sourceTree = "<group>"; };
 		AA98F07C2853DC2100F3855E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -109,26 +143,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AA98F0552853DA0D00F3855E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				AA5A91A32855C0900031D642 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA5A91962855BE060031D642 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA785B182856337300150616 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AA785B1F28563D0B00150616 /* Stubs */,
+				AA785B1C285633DE00150616 /* Models */,
+				AA785B1B285633C000150616 /* Repositories */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		AA785B1B285633C000150616 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AA785B192856339100150616 /* DogRepositoryMock.swift */,
+				AA785B26285653B600150616 /* CatRepositoryMock.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AA785B1C285633DE00150616 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA785B1D285633FB00150616 /* DogModelMock.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA785B1F28563D0B00150616 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				AA785B2028563D2000150616 /* Stubs.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
 		AA98F02F2853DA0B00F3855E = {
 			isa = PBXGroup;
 			children = (
 				AA98F03A2853DA0B00F3855E /* LoveYourPets */,
+				AA785B182856337300150616 /* Mocks */,
 				AA98F0512853DA0D00F3855E /* LoveYourPetsTests */,
-				AA98F05B2853DA0D00F3855E /* LoveYourPetsUITests */,
 				AA98F0392853DA0B00F3855E /* Products */,
+				AA5A91962855BE060031D642 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,7 +208,6 @@
 			children = (
 				AA98F0382853DA0B00F3855E /* LoveYourPets.app */,
 				AA98F04E2853DA0D00F3855E /* LoveYourPetsTests.xctest */,
-				AA98F0582853DA0D00F3855E /* LoveYourPetsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,17 +233,14 @@
 			isa = PBXGroup;
 			children = (
 				AA98F0522853DA0D00F3855E /* LoveYourPetsTests.swift */,
+				AA5A91A428561BED0031D642 /* HomeViewControllerSnapshotTest.swift */,
+				AA5A91BC285627850031D642 /* PetViewSnapshotTest.swift */,
+				AA785B16285632F400150616 /* FindYourPetViewSnaphotTest.swift */,
+				AA785B28285656CC00150616 /* CatDetailViewSnapshotTest.swift */,
+				AA785B2A28565C0B00150616 /* FindYourPetsUnitTest.swift */,
+				AA785B2C285660B400150616 /* CatDetailViewUnitTest.swift */,
 			);
 			path = LoveYourPetsTests;
-			sourceTree = "<group>";
-		};
-		AA98F05B2853DA0D00F3855E /* LoveYourPetsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AA98F05C2853DA0D00F3855E /* LoveYourPetsUITests.swift */,
-				AA98F05E2853DA0D00F3855E /* LoveYourPetsUITestsLaunchTests.swift */,
-			);
-			path = LoveYourPetsUITests;
 			sourceTree = "<group>";
 		};
 		AA98F06B2853DA1400F3855E /* Delegats */ = {
@@ -328,27 +395,12 @@
 				AA98F0502853DA0D00F3855E /* PBXTargetDependency */,
 			);
 			name = LoveYourPetsTests;
+			packageProductDependencies = (
+				AA5A91A22855C0900031D642 /* SnapshotTesting */,
+			);
 			productName = LoveYourPetsTests;
 			productReference = AA98F04E2853DA0D00F3855E /* LoveYourPetsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AA98F0572853DA0D00F3855E /* LoveYourPetsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AA98F0682853DA0D00F3855E /* Build configuration list for PBXNativeTarget "LoveYourPetsUITests" */;
-			buildPhases = (
-				AA98F0542853DA0D00F3855E /* Sources */,
-				AA98F0552853DA0D00F3855E /* Frameworks */,
-				AA98F0562853DA0D00F3855E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AA98F05A2853DA0D00F3855E /* PBXTargetDependency */,
-			);
-			name = LoveYourPetsUITests;
-			productName = LoveYourPetsUITests;
-			productReference = AA98F0582853DA0D00F3855E /* LoveYourPetsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -367,10 +419,6 @@
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = AA98F0372853DA0B00F3855E;
 					};
-					AA98F0572853DA0D00F3855E = {
-						CreatedOnToolsVersion = 13.3;
-						TestTargetID = AA98F0372853DA0B00F3855E;
-					};
 				};
 			};
 			buildConfigurationList = AA98F0332853DA0B00F3855E /* Build configuration list for PBXProject "LoveYourPets" */;
@@ -384,6 +432,7 @@
 			mainGroup = AA98F02F2853DA0B00F3855E;
 			packageReferences = (
 				AA98F0732853DADC00F3855E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				AA5A91902855BBFF0031D642 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = AA98F0392853DA0B00F3855E /* Products */;
 			projectDirPath = "";
@@ -391,7 +440,6 @@
 			targets = (
 				AA98F0372853DA0B00F3855E /* LoveYourPets */,
 				AA98F04D2853DA0D00F3855E /* LoveYourPetsTests */,
-				AA98F0572853DA0D00F3855E /* LoveYourPetsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -409,13 +457,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AA98F04C2853DA0D00F3855E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AA98F0562853DA0D00F3855E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,6 +490,7 @@
 				AA5A91872854BA400031D642 /* CatViewModel.swift in Sources */,
 				AA98F0852853DDA700F3855E /* HomeViewController.swift in Sources */,
 				AA98F03E2853DA0B00F3855E /* SceneDelegate.swift in Sources */,
+				AA785B252856496E00150616 /* Stubs.swift in Sources */,
 				AA98F08A2853DEC300F3855E /* DogModel.swift in Sources */,
 				AA98F0772853DB8600F3855E /* Constants.swift in Sources */,
 				AA98F0932853E2A400F3855E /* CatRepository.swift in Sources */,
@@ -460,16 +502,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA785B17285632F400150616 /* FindYourPetViewSnaphotTest.swift in Sources */,
+				AA5A91B328561F0D0031D642 /* CatModel.swift in Sources */,
+				AA785B2D285660B400150616 /* CatDetailViewUnitTest.swift in Sources */,
+				AA785B29285656CC00150616 /* CatDetailViewSnapshotTest.swift in Sources */,
+				AA5A91B828561F130031D642 /* WebView.swift in Sources */,
+				AA5A91AE28561EFB0031D642 /* EndPoint.swift in Sources */,
+				AA5A91A928561CBA0031D642 /* DogRepository.swift in Sources */,
+				AA5A91B128561F020031D642 /* ParameterEncoder.swift in Sources */,
+				AA785B2B28565C0B00150616 /* FindYourPetsUnitTest.swift in Sources */,
+				AA5A91AD28561EF80031D642 /* CatEndPoint.swift in Sources */,
+				AA5A91A828561CB10031D642 /* FindYourPetView.swift in Sources */,
+				AA785B1A2856339100150616 /* DogRepositoryMock.swift in Sources */,
+				AA5A91A628561BF60031D642 /* HomeViewController.swift in Sources */,
+				AA5A91BB28561F200031D642 /* AppDelegate.swift in Sources */,
+				AA5A91BD285627850031D642 /* PetViewSnapshotTest.swift in Sources */,
+				AA5A919B2855BE7B0031D642 /* PetView.swift in Sources */,
+				AA5A91A728561CAA0031D642 /* FindYourPetViewModel.swift in Sources */,
 				AA98F0532853DA0D00F3855E /* LoveYourPetsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AA98F0542853DA0D00F3855E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA98F05D2853DA0D00F3855E /* LoveYourPetsUITests.swift in Sources */,
-				AA98F05F2853DA0D00F3855E /* LoveYourPetsUITestsLaunchTests.swift in Sources */,
+				AA785B2128563D2000150616 /* Stubs.swift in Sources */,
+				AA5A91AC28561EF50031D642 /* DogEndPoint.swift in Sources */,
+				AA5A91B528561F0D0031D642 /* AnimalModel.swift in Sources */,
+				AA5A91B028561F000031D642 /* RequestProtocol.swift in Sources */,
+				AA5A919F2855C0060031D642 /* Constants.swift in Sources */,
+				AA785B27285653B600150616 /* CatRepositoryMock.swift in Sources */,
+				AA5A91AF28561EFD0031D642 /* NetworkManager.swift in Sources */,
+				AA5A91AB28561EF10031D642 /* AnimalRepository.swift in Sources */,
+				AA5A91B928561F170031D642 /* CatViewModel.swift in Sources */,
+				AA785B1E285633FB00150616 /* DogModelMock.swift in Sources */,
+				AA5A91B728561F130031D642 /* CatDetailView.swift in Sources */,
+				AA5A91B428561F0D0031D642 /* DogModel.swift in Sources */,
+				AA5A91BA28561F200031D642 /* SceneDelegate.swift in Sources */,
+				AA5A91AA28561CC00031D642 /* CatRepository.swift in Sources */,
+				AA5A91B628561F130031D642 /* AnimalView.swift in Sources */,
+				AA5A91A528561BED0031D642 /* HomeViewControllerSnapshotTest.swift in Sources */,
+				AA5A91B228561F050031D642 /* LystError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,11 +547,6 @@
 			isa = PBXTargetDependency;
 			target = AA98F0372853DA0B00F3855E /* LoveYourPets */;
 			targetProxy = AA98F04F2853DA0D00F3855E /* PBXContainerItemProxy */;
-		};
-		AA98F05A2853DA0D00F3855E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AA98F0372853DA0B00F3855E /* LoveYourPets */;
-			targetProxy = AA98F0592853DA0D00F3855E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -716,40 +778,6 @@
 			};
 			name = Release;
 		};
-		AA98F0692853DA0D00F3855E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = solanki.LoveYourPetsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LoveYourPets;
-			};
-			name = Debug;
-		};
-		AA98F06A2853DA0D00F3855E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = solanki.LoveYourPetsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LoveYourPets;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -780,18 +808,17 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA98F0682853DA0D00F3855E /* Build configuration list for PBXNativeTarget "LoveYourPetsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AA98F0692853DA0D00F3855E /* Debug */,
-				AA98F06A2853DA0D00F3855E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AA5A91902855BBFF0031D642 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		AA98F0732853DADC00F3855E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
@@ -803,6 +830,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AA5A91A22855C0900031D642 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA5A91902855BBFF0031D642 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
 		AA98F0742853DADC00F3855E /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AA98F0732853DADC00F3855E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;

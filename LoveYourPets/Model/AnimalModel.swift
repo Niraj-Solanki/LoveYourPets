@@ -7,7 +7,7 @@
 
 import Foundation
 protocol AnimalModel : Codable, Hashable {
-    var itemId: String? { get set }
+    var itemId: String? { get }
     var name: String? { get set }
     var imageRefId : String? { get set }
 }
@@ -19,9 +19,9 @@ enum AnimalType {
     var searchPromp: String {
         switch self {
         case .dog:
-            return "🐶 Bhow Bhow (find me 🐾)"
+            return "Bhow Bhow (decoded: find me 🐾)"
         case .cat:
-            return "🐱 Meaw Meaw (find me 🐾)"
+            return "Meaw Meaw (decoded: find me 🐾)"
         }
     }
     

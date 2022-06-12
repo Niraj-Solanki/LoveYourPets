@@ -8,10 +8,8 @@
 import Foundation
 struct CatModel : Codable, Hashable, AnimalModel {
     
-    var itemId: String?
     let weight : Weight?
     let id : String?
-    var name : String?
     let cfa_url : String?
     let vetstreet_url : String?
     let vcahospitals_url : String?
@@ -45,8 +43,14 @@ struct CatModel : Codable, Hashable, AnimalModel {
     let short_legs : Int?
     let wikipedia_url : String?
     let hypoallergenic : Int?
-    var imageRefId : String?
     let image : PetImage?
+    
+    //Override Properties
+    var name : String?
+    var imageRefId : String?
+    
+    //Custom Property
+    var itemId: String? { return id }
     
     enum CodingKeys: String, CodingKey {
         
@@ -89,49 +93,4 @@ struct CatModel : Codable, Hashable, AnimalModel {
         case imageRefId = "reference_image_id"
         case image = "image"
     }
-    
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        weight = try values.decodeIfPresent(Weight.self, forKey: .weight)
-        id = try values.decodeIfPresent(String.self, forKey: .id)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        cfa_url = try values.decodeIfPresent(String.self, forKey: .cfa_url)
-        vetstreet_url = try values.decodeIfPresent(String.self, forKey: .vetstreet_url)
-        vcahospitals_url = try values.decodeIfPresent(String.self, forKey: .vcahospitals_url)
-        temperament = try values.decodeIfPresent(String.self, forKey: .temperament)
-        origin = try values.decodeIfPresent(String.self, forKey: .origin)
-        country_codes = try values.decodeIfPresent(String.self, forKey: .country_codes)
-        country_code = try values.decodeIfPresent(String.self, forKey: .country_code)
-        description = try values.decodeIfPresent(String.self, forKey: .description)
-        life_span = try values.decodeIfPresent(String.self, forKey: .life_span)
-        indoor = try values.decodeIfPresent(Int.self, forKey: .indoor)
-        lap = try values.decodeIfPresent(Int.self, forKey: .lap)
-        alt_names = try values.decodeIfPresent(String.self, forKey: .alt_names)
-        adaptability = try values.decodeIfPresent(Int.self, forKey: .adaptability)
-        affection_level = try values.decodeIfPresent(Int.self, forKey: .affection_level)
-        child_friendly = try values.decodeIfPresent(Int.self, forKey: .child_friendly)
-        dog_friendly = try values.decodeIfPresent(Int.self, forKey: .dog_friendly)
-        energy_level = try values.decodeIfPresent(Int.self, forKey: .energy_level)
-        grooming = try values.decodeIfPresent(Int.self, forKey: .grooming)
-        health_issues = try values.decodeIfPresent(Int.self, forKey: .health_issues)
-        intelligence = try values.decodeIfPresent(Int.self, forKey: .intelligence)
-        shedding_level = try values.decodeIfPresent(Int.self, forKey: .shedding_level)
-        social_needs = try values.decodeIfPresent(Int.self, forKey: .social_needs)
-        stranger_friendly = try values.decodeIfPresent(Int.self, forKey: .stranger_friendly)
-        vocalisation = try values.decodeIfPresent(Int.self, forKey: .vocalisation)
-        experimental = try values.decodeIfPresent(Int.self, forKey: .experimental)
-        hairless = try values.decodeIfPresent(Int.self, forKey: .hairless)
-        natural = try values.decodeIfPresent(Int.self, forKey: .natural)
-        rare = try values.decodeIfPresent(Int.self, forKey: .rare)
-        rex = try values.decodeIfPresent(Int.self, forKey: .rex)
-        suppressed_tail = try values.decodeIfPresent(Int.self, forKey: .suppressed_tail)
-        short_legs = try values.decodeIfPresent(Int.self, forKey: .short_legs)
-        wikipedia_url = try values.decodeIfPresent(String.self, forKey: .wikipedia_url)
-        hypoallergenic = try values.decodeIfPresent(Int.self, forKey: .hypoallergenic)
-        imageRefId = try values.decodeIfPresent(String.self, forKey: .imageRefId)
-        image = try values.decodeIfPresent(PetImage.self, forKey: .image)
-        
-        itemId = id
-    }
-    
 }

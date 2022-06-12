@@ -40,7 +40,10 @@ class NetworkManagerImpl : NetworkManager {
                 do {
                     let jsonDecoder = JSONDecoder()
                     let responseModel = try jsonDecoder.decode(T.self, from: jsonData)
-                    completion?(Result.success(responseModel))
+                    
+                    guaranteeMainThreed {
+                        completion?(Result.success(responseModel))
+                    }
                 }
                 catch {
                     completion?(Result.failure(LystError("Decoding failed")))
@@ -49,3 +52,12 @@ class NetworkManagerImpl : NetworkManager {
         }.resume()
     }
 }
+
+func guaranteeMainThreed(_ work : @escaping() -> Void) {
+     if Thread.isMainThread {
+         work()
+     }
+     else {
+         DispatchQueue.main.async(execute: work)
+     }
+ }

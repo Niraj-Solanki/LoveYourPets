@@ -83,9 +83,7 @@ extension FindYourPetViewModel {
             [weak self] (result: Result<[T], LystError>) in
             switch result {
             case .success(let petModels):
-                DispatchQueue.main.async {
-                    self?.items = petModels
-                }
+                self?.items = petModels
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
             }
@@ -97,9 +95,7 @@ extension FindYourPetViewModel {
             [weak self] (result: Result<[T], LystError>) in
             switch result {
             case .success(let petModels):
-                DispatchQueue.main.async {
-                    self?.breedList.append(contentsOf: petModels)
-                }
+                self?.breedList.append(contentsOf: petModels)
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
             }
