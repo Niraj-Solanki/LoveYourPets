@@ -16,10 +16,14 @@ LoveYourPets Application:- This Sample Contain Structure of Dog/Cat Listings. </
 
 
 ### App Architecture & XCode , Language
-MVVM Architecture is used in this sample app & binding with Observer. 
-XCode :- 13.2 Version
-Swift:- 5.2
-SwiftUI 3.0
+MVVM Architecture is used in this sample app. <br> 
+XCode :- 13.2 Version <br>
+Swift:- 5 <br>
+SwiftUI 3.0 <br>
+
+### SPM
+PointFree Lib Used for Snapshot testing. <br>
+SDWebImage Lib Used for Image. <br>
 
 <b>Note<b>:- Stub used for XCTests.
 
